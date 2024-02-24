@@ -1,0 +1,216 @@
+body{
+    background-color: black;
+}
+.text-c{
+font-size: 6rem;
+font-family: "Amaranth", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+.text-c{
+    font-family: "Amaranth", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 3.5rem;
+}
+
+.top-c{
+    top: 65%;
+    animation: first-img-caption-animation linear forwards;
+    animation-timeline: view();
+}
+.img-scale{
+    opacity: 0.5;
+    animation: first-img-animation linear forwards;
+    animation-timeline: view();
+    animation-range: 100px 1300px;
+    
+}
+.ocean-caption{
+    position: absolute;
+    top: 16%;
+    left: 50%;
+    background-color: rgb(184, 172, 124);
+    border-radius: 30px;
+    padding: 8px;
+    
+}
+.sec-section{
+opacity: 0.1;
+animation: sec-img-animation linear forwards;
+    animation-timeline: view();
+    
+}
+
+/* section 1 */
+@keyframes first-img-animation {
+    25% {opacity: 1; scale: 0.6;}
+    85%,100% {opacity: 0; scale:1.8;}
+}
+@keyframes first-img-caption-animation {
+to{ top: 110%; }
+}
+
+
+
+/* section 2 */
+@keyframes sec-img-animation {
+25%{opacity: 1;}
+60%,80%{opacity: 1;}
+90%,100%{opacity: 0;}
+}
+
+
+
+.information{
+    position: absolute;
+    top:29% ;
+    width: 100vw;
+     
+}
+.bg-custom {
+    animation: gradient-change linear;
+    animation-timeline: view();
+    animation-range: entry exit;
+}
+@keyframes gradient-change  {
+    0%{ background-color: blue;padding: 1rem;}
+
+
+    30%{background-color: white;padding: 2.5rem;opacity: 1;}
+
+    100%{opacity: 0; padding: 2.5rem;}
+    
+}
+.image-fadeIn{
+    animation: fadeIn linear;
+    animation-timeline: view();
+    animation-range: entry exit;
+}
+@keyframes fadeIn {
+    0%{filter: blur(10px);}
+
+
+
+    30%{filter:blur(0px) ; opacity: 1;}
+
+    60%{opacity: 1;}
+    100%{opacity: 0;}
+}
+
+.gallery{
+    
+    position: absolute;
+    top:57% ;
+    width: 100vw;
+}
+.rounded-c{
+    border-radius: 200px 200px 400px 500px;
+    scale: .1;
+    animation: size linear forwards;
+    animation-timeline: view();
+    animation-range:entry 100px;
+    margin-bottom: 10px;
+}
+@keyframes size {
+0%{scale: 0.5;opacity: 0.3;}
+
+70%{scale: 1; border-radius: 30px;opacity: 1;}
+
+100%{scale: 1; border-radius: 30px;}
+
+
+}
+
+h3{
+    font-family: "Amaranth", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  animation: text-to-right linear forwards;
+  animation-timeline: view();
+}
+@keyframes text-to-right {
+    0%{transform: translate(-50%);background-color: black;}
+
+
+
+    20%,100%{transform: translate(0);background-color: white;}
+}
+
+.jelly{
+    animation: bright linear;
+    animation-timeline: view();
+}
+@keyframes bright {
+    0%{opacity: 0;}
+
+
+    30%{opacity: 0;}
+
+    70%,100%{opacity: 1;}
+}
+article{
+    position: absolute;
+    top: -12%;
+    /* padding: 100px; */
+    scale: 0.8;
+    animation: glow linear forwards;
+    animation-timeline: view();
+    opacity: 0;
+}
+@keyframes glow {
+0%{transform: translateY(0);opacity: 0;}
+25%{transform: translateY(0);opacity: 0;filter: drop-shadow(0 130px  160px rgba(255, 255, 255, 0));
+}
+35%{opacity: 0;}
+60%{transform: translateY(30%);opacity: 1;filter: drop-shadow(0 200px  160px rgb(25, 0, 255));scale: 0.8;}
+
+100%{transform: translateY(90%);filter: drop-shadow(0 200px  160px rgb(255, 255, 255));}
+
+
+}
+.last-one{
+    position: absolute;
+    top: 73%;
+    width: 100vw;
+}
+
+.end{
+    color: white;
+    font-size: 12rem;
+    font-family: "Amaranth", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  /* border: 10px solid white; */
+  background-color: black;
+  border-radius: 30px;
+  
+  
+}
+.border-rgb{
+    padding: 3px;
+    animation-duration: 3s;
+    animation-name: rgb;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    border-radius: 30px;
+    backface-visibility: visible;
+    filter: drop-shadow(0 100px 200px white);
+    
+}
+@keyframes rgb {
+    10%{background-color: red;transform: rotateX(0);}
+    20%{background-color: rgb(255, 247, 0);}
+    30%{background-color: rgb(255, 157, 0);transform: rotateX(180deg) rotateY(0)}
+    40%{background-color: rgb(64, 255, 0);}
+    50%{background-color: rgb(0, 255, 153);transform: rotateY(180deg);}
+    60%{background-color: rgb(0, 247, 255);}
+    70%{background-color: rgb(0, 8, 255);}
+    80%{background-color: rgb(128, 0, 255);}
+    90%{background-color: rgb(255, 0, 221);}
+    100%{background-color: rgb(255, 0, 115);}
+}
+
